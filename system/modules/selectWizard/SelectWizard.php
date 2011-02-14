@@ -181,11 +181,11 @@ class SelectWizard extends Widget
 		for ($i=0; $i<count($this->varValue); $i++)
 		{
 			// Add modules
-			$strOptions = $this->generateOptions($this->options, $this->varValue[$i]['content']);
+			$strOptions = $this->generateOptions($this->options, $this->varValue[$i]);
 			
 			$return .= '
   <tr>
-    <td><select name="'.$this->strId.'['.$i.'][content]" class="tl_select" onfocus="Backend.getScrollOffset();">'.$strOptions.'</select></td>
+    <td><select name="'.$this->strId.'['.$i.']" class="tl_select" onfocus="Backend.getScrollOffset();">'.$strOptions.'</select></td>
     <td>';
 
 			foreach ($arrButtons as $strButton)
